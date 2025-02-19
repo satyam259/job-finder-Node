@@ -5,7 +5,7 @@ const dotenv = require('dotenv');
 const user = require("./routes/userRoutes.js");
 const cookieParser = require("cookie-parser");
 const bodyParser = require("body-parser");
-const ErrorMiddleware= require("../job-finder-Node/middleware/error.js")
+const ErrorMiddleware= require("./middleware/error.js")
 const cors = require("cors");
 const path = require('path');
 dotenv.config();
