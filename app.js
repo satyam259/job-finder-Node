@@ -5,6 +5,7 @@ const dotenv = require('dotenv');
 const user = require("./routes/userRoutes.js");
 const cookieParser = require("cookie-parser");
 const bodyParser = require("body-parser");
+const ErrorMiddleware= require("../job-finder-Node/middleware/error.js")
 const cors = require("cors");
 const path = require('path');
 dotenv.config();
@@ -24,7 +25,7 @@ let corsOption = {
 app.use(cors(corsOption));
 app.use("/api/v1", user);
 
-// app.use(ErrorMiddleware);
+app.use(ErrorMiddleware);
 app.get('/', (req, res)=>{
   res.send("Congrats, server is running now")
 })
