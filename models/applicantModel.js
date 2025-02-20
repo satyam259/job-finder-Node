@@ -6,26 +6,8 @@ const ApplicantSchema = new Schema(
   {
     applicant_id: {
       type: Schema.Types.ObjectId,
-      ref: "Auth",
+      ref: "User",
       required: true,
-    },
-    first_name: {
-      type: String,
-    },
-    last_name: {
-      type: String,
-    },
-    profile_summary: {
-      type: String,
-    },
-    phone_number: {
-      type: String,
-    },
-    location: {
-      type: String,
-    },
-    location: {
-      type: String,
     },
     status:{
         type:String,
